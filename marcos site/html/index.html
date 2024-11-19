@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <META name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/> 
+    <title>comabem.com</title>
+    <style>
+        *
+        
+         body{
+            background: rgb(255,133,63);
+            color-scheme: rgb(0,0,0);
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        
+    
+    </style>
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+   
+ 
+</head>
+<body>
+    
+
+    <header id="topo">
+             <div id="header">
+               <img src="../imagens/restaurant-logo-design-vector.jpg"/><!--imagens--> 
+               <h2>Restaurante Que Delicia</h2>
+            </div>
+
+
+        <nav>
+            <strong>
+                 <ul>
+                     <li><a href="#bovinos">bovinos</a></li>    
+                     <li>&nbsp;|&nbsp;</li>
+                     <li><a href="#aves">aves</a></li>
+                     <li>&nbsp;|&nbsp;</li>
+                     <li><a href="#peixes">peixes</a></li>
+                     <li>&nbsp;|&nbsp;</li>
+                     <li><a href="#bebidas">bebidas</a></li>
+                
+                 </ul>
+            </strong>
+   
+        </nav>
+    </header>
+    <br>    
+    <section id="carrossel">
+		<img src="../imagens/rest1.png" name="slide" id="slide"/>
+		<aside>
+			<div id="lateral_titulo"></div>
+			<br/>
+			<div id="lateral_descr"><br/> <br/></div>
+		</aside>
+	</section>
+	<p class="ante" onClick="Anterior()">&#60;</p>
+	<p class="prox" onClick="Proximo()">&#62;</p>
+    <br>
+	
+    <script language="JavaScript">
+	var contador = 1; //variável pública criada fora da function
+	var img1="../imagens/rest1.png";
+	var img2="../imagens/rest2.png";
+	var img3="../imagens/rest3.png";
+    var img4="../imagens/rest4.png";
+    var img5="../imagens/rest5.png";
+    var img6="../imagens/rest6.png";
+    var img7="../imagens/rest7.png";
+	var tempo=2500; //2500(milessegundos) : 1000 (milessegundo) = 2.5s
+	var exibir=setInterval("Exibindo()",tempo);
+    function Exibindo()
+	{
+	  	document.images["slide"].src=eval("img"+contador);
+		
+		if (contador==1)
+		{
+			document.getElementById("lateral_titulo").innerHTML// = "Cachoeira do Adeus";
+			document.getElementById("lateral_descr").innerHTML// = "5 metros de queda livre <br/> Água cristalina em temperatura <br/> em torno dos 18°C...";
+		}
+		else if (contador==2)
+		{
+			document.getElementById("lateral_titulo").innerHTML  /*"Lago Azul"*/
+			document.getElementById("lateral_descr").innerHTML /* "Tranquilidade em meio <br/> às águas calmas e o verde <br/> da mata e o canto dos pássaros!";*/
+		}
+		else
+		{
+			document.getElementById("lateral_titulo").innerHTML /* "Mirante do Paraíso";*/
+			document.getElementById("lateral_descr").innerHTML  /*"Um lugar para relaxar e contemplar <br/> a paisagem, sentindo a brisa fresca <br/> existente nas altitudes.";*/
+		}
+						  
+		if (contador<7)
+			contador++;
+		else
+			contador=1;
+	} 
+	  
+	function Anterior()
+	{
+		clearInterval(exibir);//interrompe o looping
+		
+		if (contador == 2)
+			contador = 7;
+		else if (contador == 3)
+			contador = 1;
+		else
+			contador = 2;
+		
+		
+		document.images["slide"].src=eval("img"+contador);
+		
+		/*if (contador==1)
+			document.querySelector("div").innerHTML = "Cachoeira do Adeus";
+		else if (contador==2)
+			document.querySelector("div").innerHTML = "Lago Azul";
+		else
+			document.querySelector("div").innerHTML = "Mirante do Paraíso";*/
+		if (contador==1)
+		{
+			document.getElementById("lateral_titulo").innerHTML/* = "Cachoeira do Adeus";*/
+			document.getElementById("lateral_descr").innerHTML /*= "5 metros de queda livre <br/> Água cristalina em temperatura <br/> em torno dos 18°C...";*/
+		}
+		else if (contador==2)
+		{
+			document.getElementById("lateral_titulo").innerHTML/* = "Lago Azul";*/
+			document.getElementById("lateral_descr").innerHTML /*= "Tranquilidade em meio <br/> às águas calmas e o verde <br/> da mata e o canto dos pássaros!";*/
+		}
+		else
+		{
+			document.getElementById("lateral_titulo").innerHTML/* = "Mirante do Paraíso";*/
+			document.getElementById("lateral_descr").innerHTML //= "Um lugar para relaxar e contemplar <br/> a paisagem, sentindo a brisa fresca <br/> existente nas altitudes.";
+		}
+
+		if (contador<7)
+			contador++;
+		else
+			contador=1;
+				
+		exibir=setInterval("Exibindo()",tempo);
+	}
+	 
+	 function Proximo()
+	{
+		clearInterval(exibir);//interrompe o looping 
+		document.images["slide"].src=eval("img"+contador);
+		
+		/*if (contador==1)
+			document.querySelector("div").innerHTML = "Cachoeira do Adeus";
+		else if (contador==2)
+			document.querySelector("div").innerHTML = "Lago Azul";
+		else
+			document.querySelector("div").innerHTML = "Mirante do Paraíso";*/
+
+		if (contador==1)
+		{
+			document.getElementById("lateral_titulo").innerHTML// = "Cachoeira do Adeus";
+			document.getElementById("lateral_descr").innerHTML// = "5 metros de queda livre <br/> Água cristalina em temperatura <br/> em torno dos 18°C...";
+		}
+		else if (contador==2)
+		{
+			document.getElementById("lateral_titulo").innerHTML// = "Lago Azul";
+			document.getElementById("lateral_descr").innerHTML //= "Tranquilidade em meio <br/> às águas calmas e o verde <br/> da mata e o canto dos pássaros!";
+		}
+		else
+		{
+			document.getElementById("lateral_titulo").innerHTML //= "Mirante do Paraíso";
+			document.getElementById("lateral_descr").innerHTML// = "Um lugar para relaxar e contemplar <br/> a paisagem, sentindo a brisa fresca <br/> existente nas altitudes.";
+		}
+
+		if (contador<7)
+			contador++;
+		else
+			contador=1;
+			
+		exibir=setInterval("Exibindo()",tempo);
+	}
+	  
+   </script>
+       <section id="bovinos">
+         <section class="pratos">
+             <img src="../imagens/linguiça.jpg"/>
+             <ul><h2>linguiça toscana</h2>
+                <li>arroz</li>
+                <li>feijão preto</li>
+                <li>linguisa toscana</li>
+                <li>abobrinhas fritas em rodelas</li>
+                <li>molho soyo</li>
+                <li>salada de alface com tomate</li>
+                <br>
+                <br>
+                <strong>R$ 25,90</strong>
+
+            </ul>
+            </section>
+         </section>
+         <br/><br/>
+
+         <section id="aves">
+             <section class="pratos">
+                <img src="../imagens/frango.png"/> 
+                <ul><h2>frango</h2>
+                   <li>arroz</li>
+                   <li>feijão</li>
+                   <li>file de frango</li>
+                   <li>farofa</li>
+                   <li>brocolis,cenoura e couve flor</li>
+                   <br>
+                   <br>
+                   <strong>R$ 25,90</strong>
+
+                 </ul> 
+            </section>
+        </section>
+        <br></br>
+
+        <section id="peixes">
+            <section class="pratos">
+                <img src="../imagens/tilapia.jfif"/>
+                <ul><h2>peixes</h2>
+                    <li>arroz</li>
+                    <li>feijão</li>
+                    <li>tilapia empanada</li>
+                    <li>fritas</li>
+                    <li>salada de alface com tomates</li>
+                    <br>
+                    <br>
+                    <strong>R$ 25,90 </strong>
+
+                </ul>
+            </section>
+        </section>
+            <br></br>
+            <section id="bebidas">
+                <section class="pratos">
+                    <img src="../imagens/ng_bebidas.png"/>
+                    <ul><h2>bebidas</h2>
+                        <li>cola (lata,2 litros) </li>
+                        <li>guarana (lata,2 litros)</li>
+                        <li>fanata (lata,2 litros)</li>
+                        <li>suco laranja (copo)</li>
+                        <li>suco morango (copo)</li>
+                        <li>suco abacaxi (copo)</li>
+                        <li>suco limão (copo)</li>
+                        <li> cerveja (lata)</li>
+                        <br>
+                        <strong>valores a confirmar</strong>
+                    
+    
+                    </ul>
+    
+                </section>
+                
+        </section>
+        
+        <section class="video" >
+           <iframe src="https://www.youtube.com/embed/kEqi-c79Nik?si=hrsTviRoClV7Di2H" title="YouTube video player"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+           </iframe>
+        </section>
+
+        <section class="mapa" id="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2204699483705!2d-46.671854599999996!3d-23.560524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57806e5988d9%3A0xa38687ec90914aa3!2sR.%20Oscar%20Freire%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1sen!2sbr!4v1727138887350!5m2!1sen!2sbr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        </section>
+     <footer>
+             
+        <div>
+          
+            <a href="https://wa.me/5511991827222/" target="_blank"><img src="../imagens/icons8-whatsapp-48.png"> 
+            <a href="https://www.instagram.com/" target="_blank"><img src="../imagens/icons8-instagram-48.png">
+            <a href="https://www.reclameaqui.com.br/" target="_blank"><img src="../imagens/icons8-conta-verificada-48.png">    
+            <a href="file:///C:/Users/marcos%20lima/Desktop/marcos%20site/html/faleconosco.html" target="_blank"><img src="../imagens/formulario1.png">    
+        </div>
+          
+
+        <a id="voltar" href="#topo"><img src="../imagens/seta1-removebg-preview.png">
+            
+     </footer>
+        
+</body>
+</html>

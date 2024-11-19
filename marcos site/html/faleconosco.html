@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="../css/faleconosco.css">
+</head> 
+     
+
+ <body>
+     <form method="post" action="mailto:email" enctype="text/plain">
+        
+        
+        <fieldset>
+            
+            <legend>DADOS PESSOAIS</legend>
+            <table>
+                <tr>
+                    <td class="esq"><label for="nome">Nome:</label></td>
+                    <td class="dir"><input type="text" id="nome" name="nome" required><br/></td>
+                </tr>
+                
+                <tr>
+                    <td class="esq"><label for="sexo">Sexo:</label></td>
+                    <td class="dir">
+                        <input type="radio" id="masculino" name="sexo" value="masculino" required>M
+                        <input type="radio" id="feminino" name="sexo" value="feminino">F
+                    </td>
+                </tr> 
+                
+                <tr>   
+                    <td class="esq"><label for="email">Email:</label></td>
+                    <td class="dir"><input type="email" id="email" name="email" required></td>
+                </tr>
+                
+                <tr>
+                    <td class="esq"><label for="data-nascimento">Data de Nascimento:</label></td>
+                    <td class="dir"><input type="date" id="data-nascimento" name="data-nascimento" required></td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>    
+        <legend>ESCOLARIDADE</legend>
+            <table>
+                
+                <tr>
+                    <td><label for="acad" class="titu"> FORMAÇÃO ACADÊMICA:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <input type="radio" id="radio" name="fa" value="ef" required/>
+                        <span>Ensino Fundamental</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="radio" id="radio" name="fa" value="em"/>
+                        <span>Ensino Medio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="radio" id="radio" name="fa" value="es"/>
+                        <span>Ensino Superior&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>   
+                
+                    
+                <tr>
+                    <td><label for="acad" class="titu"> CURSOS DE ESPECIALIZAÇÃO:&nbsp;&nbsp;</label></td>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <input type="checkbox" id="checkbox" name="fa" value="T" required/>
+                        <span>Técnico&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" id="checkbox" name="fa" value="M"/>
+                        <span>Mestrado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="checkbox" id="checkbox" name="fa" value="D"/>
+                        <span>Doutorado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                </tr>   
+                
+                
+             
+        </table>
+        
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>MENSAGEN</legend>
+            <label for="escolha">Escolha uma opção:</label>
+            <select id="escolha" name="opcao">
+                <option value="Elogios">Elogios</option>
+                <option value="Sugestão">Sugestão</option>
+                <option value="Reclamação">Reclamação</option>
+            </select></br>
+            
+            <textarea id="comentario" name="comentario" rows="4" cols="30"></textarea>
+        
+
+        </fieldset>
+        
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+
+
+    </form>  
+    
+    
+    
+</body>

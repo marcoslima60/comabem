@@ -1,0 +1,89 @@
+body
+{
+    
+    font-family:Verdana;
+    background-image:url(../imagens/restaurante-fundo-.jpg);
+    background-attachment:fixed;
+    background-size: 100%;
+
+}
+   
+fieldset 
+{
+    
+    background-color: rgba(138, 97, 9, 1);
+    padding: 15px;             
+    border-radius: 5px;        
+    text-align: center;         
+    margin-left: 28%;
+    width: 45%;
+    align-items: right;
+}
+  
+legend 
+{
+    
+    font-weight: bold;          
+    text-align: center; 
+    background-color: hsl(38, 24%, 93%);        
+}
+button
+{
+    margin: 20px auto;        
+    border: none;               
+    border-radius: 5px;         
+    cursor: pointer;           
+    display: inline-flex;
+    align-items: center;
+    margin-left: 31%;
+}
+textarea
+{
+    resize: none;
+    width:50%;
+}
+
+.checkbox 
+{
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+}
+
+.radio
+{
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+}
+input
+{
+     align-items: right;
+}
+
+input[type=text], input[type=email], input[type=date]
+{
+    width:80%;
+}
+ 
+table
+{
+    text-align:center;
+    width:100%;
+}
+
+.esq
+{
+    text-align:right;
+    width:40%;
+    padding-right:3%;
+}
+
+.dir
+{
+    text-align:left;
+    width:60%;
+    padding-left:3%;
+}
+
+
